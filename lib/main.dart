@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kalkulator_potrosnje/pages/main_page/main_page.dart';
+import 'package:kalkulator_potrosnje/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      home: const MainPage(),
+      theme: lightMode,
+      darkTheme: darkMode,
     );
   }
 }
