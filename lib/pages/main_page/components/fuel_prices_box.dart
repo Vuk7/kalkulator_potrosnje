@@ -19,21 +19,25 @@ class FuelPricesBox extends StatelessWidget {
               color: Theme.of(context).colorScheme.primary,
             ),
             child: Padding(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 children: [
                   Text(
                     firstName,
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 17, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(
                     height: 1,
                   ),
-                  Text(
-                    "$firstPrice EUR",
-                    style: const TextStyle(
-                        fontSize: 17, fontWeight: FontWeight.bold),
-                  ),
+                  Text("$firstPrice EUR",
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Theme.of(context).colorScheme.background,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center),
                   const SizedBox(
                     height: 10,
                   ),
@@ -41,18 +45,19 @@ class FuelPricesBox extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    secondName,
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-                  ),
+                  Text(secondName,
+                      style: const TextStyle(
+                          fontSize: 17, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center),
                   const SizedBox(
                     height: 1,
                   ),
-                  Text(
-                    "$secondPrice EUR",
-                    style: const TextStyle(
-                        fontSize: 17, fontWeight: FontWeight.bold),
-                  ),
+                  Text("$secondPrice EUR",
+                      style: TextStyle(
+                          fontSize: 17,
+                          color: Theme.of(context).colorScheme.background,
+                          fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center),
                 ],
               ),
             ),
